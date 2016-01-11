@@ -1,0 +1,48 @@
+<div class="page-header">
+	<h1>
+		<f:image src="{author.image.originalResource.publicUrl}" width="100"/>
+		{author.username}
+	</h1>
+</div>
+
+<div class="row">
+	<div class="col-md-3">
+		<h3>
+			<span class="label label-info">
+				<f:translate key="tx_pgblog_domain_model_author.first_name" />
+			</span>
+		</h3>
+	</div>
+	<div class="col-md-9">
+		<h3>
+			{author.firstName}
+		</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-3">
+		<h3>
+			<span class="label label-info">
+				<f:translate key="tx_pgblog_domain_model_author.last_name" />
+			</span>
+		</h3>
+	</div>
+	<div class="col-md-9">
+		<h3>{author.lastName}</h3>
+	</div>
+	
+</div>
+<div class="row">
+	<div class="col-md-3">
+		<h3>
+			<span class="label label-info">
+				<f:translate key="tx_pgblog_domain_model_author.presentation" />
+			</span>
+		</h3>
+	</div>
+	<div class="col-md-9">
+		<h3>
+			{author.presentation}
+		</h3>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+
+<table class="tx-pg-blog" >
+	<tr>
+		<td>
+			<f:translate key="tx_pgblog_domain_model_comment.title" />
+		</td>
+		<td>
+		{comment.title}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_pgblog_domain_model_comment.content" />
+		</td>
+		<td>
+		{comment.content}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_pgblog_domain_model_comment.username" />
+		</td>
+		<td>
+		{comment.username}
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<f:translate key="tx_pgblog_domain_model_comment.publication_date" />
+		</td>
+		<td>
+		{comment.publicationDate -> f:format.date()}
+		</td>
+	</tr>
+</table>

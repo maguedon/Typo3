@@ -1,0 +1,14 @@
+<div class="page-header">
+	<h1>{post.title}</h1>
+	<p>{post.publicationDate -> f:format.date(format: '%d %B %Y')}</p>
+</div>
+
+<div class="row">
+	{post.summary -> f:format.html()}
+</div>
+<div class="row">
+	<f:image src="{post.image.originalResource.publicUrl}" width="200"/>
+</div>
+<div class="row">
+	{post.content}
+</div>

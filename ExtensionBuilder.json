@@ -1,0 +1,541 @@
+{
+    "modules": [
+        {
+            "config": {
+                "position": [
+                    520,
+                    80
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": [
+                        "last"
+                    ]
+                },
+                "name": "Post",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "367439598248"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "title",
+                            "propertyType": "String",
+                            "uid": "27121344264"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "publicationDate",
+                            "propertyType": "Date",
+                            "uid": "339734328604"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "summary",
+                            "propertyType": "RichText",
+                            "uid": "4012319970"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "content",
+                            "propertyType": "RichText",
+                            "uid": "1381764171325"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "image",
+                            "propertyType": "Image",
+                            "uid": "742074468385"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "authors",
+                            "relationType": "manyToMany",
+                            "relationWire": "[wired]",
+                            "uid": "1198195680634"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "categories",
+                            "relationType": "manyToMany",
+                            "relationWire": "[wired]",
+                            "uid": "939808262145"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": true,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "comments",
+                            "relationType": "zeroToMany",
+                            "relationWire": "[wired]",
+                            "uid": "238284317524"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "tags",
+                            "relationType": "manyToMany",
+                            "relationWire": "[wired]",
+                            "uid": "1389844610417"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    1101,
+                    38
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Author",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": true,
+                    "type": "Entity",
+                    "uid": "692254155163"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "firstName",
+                            "propertyType": "String",
+                            "uid": "26332388566"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "lastName",
+                            "propertyType": "String",
+                            "uid": "513528290099"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "username",
+                            "propertyType": "String",
+                            "uid": "679022669932"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "presentation",
+                            "propertyType": "RichText",
+                            "uid": "929721529991"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "image",
+                            "propertyType": "Image",
+                            "uid": "273611436997"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": [
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "tags",
+                            "relationType": "manyToMany",
+                            "relationWire": "[wired]",
+                            "uid": "1385241829145"
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    229,
+                    333
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": true,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Comment",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": false,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "251028249217"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "title",
+                            "propertyType": "String",
+                            "uid": "576074098420"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "content",
+                            "propertyType": "RichText",
+                            "uid": "1305797961637"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "username",
+                            "propertyType": "String",
+                            "uid": "290047212898"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "publicationDate",
+                            "propertyType": "Date",
+                            "uid": "235726284878"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    88,
+                    117
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Category",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": true,
+                    "type": "Entity",
+                    "uid": "852851679529"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "name",
+                            "propertyType": "String",
+                            "uid": "620907592073"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "description",
+                            "propertyType": "RichText",
+                            "uid": "327256707574"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    966,
+                    395
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": true,
+                    "_default1_show": true,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Tag",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": true,
+                    "type": "Entity",
+                    "uid": "98598441107"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsRequired": false,
+                            "propertyName": "name",
+                            "propertyType": "String",
+                            "uid": "120129668934"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        }
+    ],
+    "properties": {
+        "backendModules": [],
+        "description": "Exercice cours de CMS",
+        "emConf": {
+            "category": "plugin",
+            "custom_category": "",
+            "dependsOn": "typo3 => 7.6.0-7.6.99\n",
+            "disableLocalization": false,
+            "disableVersioning": false,
+            "skipGenerateDocumentationTemplate": false,
+            "sourceLanguage": "en",
+            "state": "stable",
+            "targetVersion": "7.6.0-7.6.99",
+            "version": "1.0.0"
+        },
+        "extensionKey": "pg_blog",
+        "name": "PG Blog",
+        "originalExtensionKey": "",
+        "originalVendorName": "",
+        "persons": [
+            {
+                "company": "Dawin",
+                "email": "maguedon@laposte.net",
+                "name": "Mathilde Gu\u00e9don",
+                "role": "Developer"
+            },
+            {
+                "company": "Dawin",
+                "email": "pautrot.maxence@gmail.com",
+                "name": "Maxence Pautrot",
+                "role": "Developer"
+            }
+        ],
+        "plugins": [
+            {
+                "actions": {
+                    "controllerActionCombinations": "Post  => list,show,last\nAuthor => list,show\nCategory => list,show\nTag => list,show\nComment => create",
+                    "noncacheableActions": "Comment => create",
+                    "switchableActions": "Posts\nPost->list; Post->show;\nAuthors\nAuthor->list; Author->show;\nCategories\nCategory->list; Category->show;\nTags\nTag->list; Tag->show;\nLast post\nPost->last;\nComments\nComment->create;"
+                },
+                "key": "pi1",
+                "name": "PG Blog Front"
+            }
+        ],
+        "vendorName": "Dawin"
+    },
+    "wires": [
+        {
+            "src": {
+                "moduleId": 0,
+                "terminal": "relationWire_1",
+                "uid": "939808262145"
+            },
+            "tgt": {
+                "moduleId": 3,
+                "terminal": "SOURCES",
+                "uid": "852851679529"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 0,
+                "terminal": "relationWire_2",
+                "uid": "238284317524"
+            },
+            "tgt": {
+                "moduleId": 2,
+                "terminal": "SOURCES",
+                "uid": "251028249217"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 0,
+                "terminal": "relationWire_3",
+                "uid": "1389844610417"
+            },
+            "tgt": {
+                "moduleId": 4,
+                "terminal": "SOURCES",
+                "uid": "98598441107"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 1,
+                "terminal": "relationWire_0",
+                "uid": "1385241829145"
+            },
+            "tgt": {
+                "moduleId": 4,
+                "terminal": "SOURCES",
+                "uid": "98598441107"
+            }
+        },
+        {
+            "src": {
+                "moduleId": 0,
+                "terminal": "relationWire_0",
+                "uid": "1198195680634"
+            },
+            "tgt": {
+                "moduleId": 1,
+                "terminal": "SOURCES",
+                "uid": "692254155163"
+            }
+        }
+    ],
+    "log": {
+        "last_modified": "2016-01-11 02:56",
+        "extension_builder_version": "7.6.0",
+        "be_user": " (1)"
+    }
+}
