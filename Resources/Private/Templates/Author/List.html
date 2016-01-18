@@ -13,29 +13,29 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="main">
-<h1>Listing for Author</h1>
+<h1>Auteurs</h1>
 
 <f:flashMessages />
 
-<table  class="tx_pgblog table" >
-	<tr>
-		<th><f:translate key="tx_pgblog_domain_model_author.first_name" /></th>
-		<th><f:translate key="tx_pgblog_domain_model_author.last_name" /></th>
-		<th><f:translate key="tx_pgblog_domain_model_author.username" /></th>
-		<th><f:translate key="tx_pgblog_domain_model_author.presentation" /></th>
-		<th><f:translate key="tx_pgblog_domain_model_author.image" /></th>
-	</tr>
+<div class="row">
+<f:for each="{authors}" as="author">
+	<div class="author panel panel-default col-md-4">
+		<div class="panel-body">
+			<div class="row">
+				<f:image src="{author.image.originalResource.publicUrl}" width="100"/>
+				<f:link.action action="show" arguments="{author : author}"> {author.username}</f:link.action>
 
-	<f:for each="{authors}" as="author">
-		<tr>
-			<td><f:link.action action="show" arguments="{author : author}"> {author.firstName}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{author : author}"> {author.lastName}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{author : author}"> {author.username}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{author : author}"> {author.presentation}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{author : author}"> {author.image.originalResource.name}</f:link.action></td>
-		</tr>
-	</f:for>
-</table>
 
-<f:link.action action="new" class="btn btn-default">New Author</f:link.action>
+				 <p>({author.firstName} {author.lastName})</p>
+			</div>
+			<div class="row">
+				<p>{author.presentation}</p>
+			</div>
+		</div>
+	</div>
+</f:for>
+</div>
+<div class="row">
+	<f:link.action action="new" class="btn btn-default">New Author</f:link.action>
+</div>
 </f:section>

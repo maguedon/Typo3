@@ -17,23 +17,29 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <f:flashMessages />
 
-<table  class="tx_pgblog table" >
-	<tr>
-		<th><f:translate key="tx_pgblog_domain_model_post.title" /></th>
-		<th><f:translate key="tx_pgblog_domain_model_post.publication_date" /></th>
-		<th><f:translate key="tx_pgblog_domain_model_post.summary" /></th>
-		<th><f:translate key="tx_pgblog_domain_model_post.image" /></th>
-	</tr>
-
-	<f:for each="{posts}" as="post">
-		<tr>
-			<td><f:link.action action="show" arguments="{post : post}"> {post.title}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{post : post}"> {post.publicationDate -> f:format.date()}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{post : post}"> {post.summary}</f:link.action></td>
-			<td><f:image src="{post.image.originalResource.publicUrl}" width="100"/></td>
-		</tr>
-	</f:for>
-</table>
-
-<f:link.action action="new" class="btn btn-default">New Post</f:link.action>
+<f:widget.paginate objects="{posts}" as="paginatedPosts" configuration="{itemsPerPage: 4, insertAbove: 1, insertBelow: 1, maximumNumberOfLinks: 5}">
+	<div class="row">
+		<f:for each="{paginatedPosts}" as="post">
+			<div class="post panel panel-default col-md-6">
+				<div class="panel-body">
+					<div class="row">
+						<f:link.action action="show" arguments="{post : post}"> {post.title}</f:link.action> 
+						(<f:format.date date="{post.publicationDate}" format="d M Y" />)
+					</div>
+					<div class="row">
+						<div class="col-md-offset-3 col-md-3">
+							<f:image src="{post.image.originalResource.publicUrl}" width="100"/>
+						</div>
+					</div>
+					<div class="row">
+						<p>{post.summary}</p>
+					</div>
+				</div>
+			</div>
+		</f:for>
+	</div>
+</f:widget.paginate>
+<div class="row">
+	<f:link.action action="new" class="btn btn-default">New Post</f:link.action>
+</div>
 </f:section>
