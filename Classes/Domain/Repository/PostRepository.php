@@ -36,4 +36,10 @@ class PostRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 		$query->matching($query->contains('categories', $category));
 		return $query->execute();
 	}
+
+	public function findByTag(\Dawin\PgBlog\Domain\Model\Tag $tag){
+		$query = $this->createQuery();
+		$query->matching($query->contains('tags', $tag));
+		return $query->execute();
+	}
 }

@@ -39,6 +39,14 @@ class TagController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * @inject
      */
     protected $tagRepository = NULL;
+
+    /**
+     * postRepository
+     *
+     * @var \Dawin\PgBlog\Domain\Repository\PostRepository
+     * @inject
+     */
+    protected $postRepository = NULL;
     
     /**
      * action list
@@ -59,7 +67,11 @@ class TagController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      */
     public function showAction(\Dawin\PgBlog\Domain\Model\Tag $tag)
     {
-        $this->view->assign('tag', $tag);
+        $posts = $this->postRepository->findByTag($tag);
+        $this->view->assignMultiple(array(
+            'tag' => $tag,
+            'posts' => $posts
+        ));
     }
 
 }
