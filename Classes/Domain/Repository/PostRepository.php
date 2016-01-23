@@ -31,8 +31,9 @@ namespace Dawin\PgBlog\Domain\Repository;
  */
 class PostRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
-	public function findByTag(){
-
+    public function findByCategory(\Dawin\PgBlog\Domain\Model\Category $category){
+		$query = $this->createQuery();
+		$query->matching($query->contains('categories', $category));
+		return $query->execute();
 	}
-    
 }

@@ -39,6 +39,14 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      * @inject
      */
     protected $categoryRepository = NULL;
+
+     /**
+     * postRepository
+     *
+     * @var \Dawin\PgBlog\Domain\Repository\PostRepository
+     * @inject
+     */
+    protected $postRepository = NULL;
     
     /**
      * action list
@@ -59,7 +67,11 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
      */
     public function showAction(\Dawin\PgBlog\Domain\Model\Category $category)
     {
-        $this->view->assign('category', $category);
+        $posts = $this->postRepository->findByCategory($category);
+        $this->view->assignMultiple(array(
+            'category' => $category,
+            'posts' => $posts
+            ));
     }
 
 }
