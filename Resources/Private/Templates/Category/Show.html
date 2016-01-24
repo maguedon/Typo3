@@ -21,32 +21,12 @@ Otherwise your changes will be overwritten the next time you save the extension 
 <div class="row">
 	<h3>Posts dans cette catégorie : </h3>
 	<f:for each="{posts}" as="post">
-		<div class="post panel panel-default col-md-6">
-			<div class="panel-body">
-				<div class="row">
-					<f:link.action action="show" arguments="{post : post}"> {post.title}</f:link.action> 
-					(<f:format.date date="{post.publicationDate}" format="d M Y" />)
-				</div>
-				<div class="row">
-					<div class="col-md-3">
-						<f:image src="{post.image.originalResource.publicUrl}" width="100"/>
-					</div>
-				</div>
-				<div class="row">
-					<p>{post.summary}</p>
-				</div>
-			</div>
-		</div>
+		<f:render partial="Post/Card" arguments="{post:post}" />
 	</f:for>
 </div>
 
 <div class="row">
-	<div class="col-md-2">
-		<f:link.action action="list" class="btn btn-default">Back to list</f:link.action><br />
-	</div>
-	<div class="col-md-2">
-		<f:link.action action="new" class="btn btn-default">New Category</f:link.action>
-	</div>
+	<f:link.action action="list" class="btn btn-default">Back to list</f:link.action><br />
 </div>
 
 </f:section>

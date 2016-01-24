@@ -1,0 +1,16 @@
+<div class="post panel panel-default col-md-6">
+	<div class="panel-body">
+		<div class="row">
+			<f:link.action pageUid="12" action="show" controller="PostController" arguments="{post : post}"> {post.title}</f:link.action> 
+			(<f:format.date date="{post.publicationDate}" format="d M Y" />)
+		</div>
+		<div class="row">
+			<div class="col-md-offset-3 col-md-3">
+				<f:image src="{post.image.originalResource.publicUrl}" width="100"/>
+			</div>
+		</div>
+		<div class="row">
+			<p>{post.summary}</p>
+		</div>
+	</div>
+</div>
