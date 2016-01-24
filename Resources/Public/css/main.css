@@ -2,3 +2,48 @@
 	height: 250px;
 	overflow: auto;
 }
+
+.lists{
+	margin-top: 10px;
+}
+
+
+.taglist {
+	list-style: none;
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.taglist li {
+	display: inline-block;
+	margin-right: 0.2rem;
+}
+
+.tag {
+	padding: 0.3rem 1rem;
+	border: 1px solid #8C8C8C;
+	border-radius: 1rem;
+	font-size: 0.75rem;
+	color: #8C8C8C;
+	transition: all 0.3s ease;
+	margin-bottom: 0.3rem;
+	position: relative;
+}
+
+.tag.orange {
+	border-color: #e96657;
+	color: #e96657;
+}
+
+.tag.teal {
+	border-color: #37979C;
+	color: #37979C;
+}
+
+.panel-heading{
+	margin: 0;
+}
+.panel{
+	padding: 0;
+}

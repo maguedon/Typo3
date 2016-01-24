@@ -17,3 +17,24 @@
 		{author.presentation}
 	</p>
 </div>
+
+<div class="row lists">
+
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h3 class="panel-title">Tags</h3>
+		</div>
+		<div class="panel-body">
+			<ul class="taglist">
+				<f:for each="{author.tags}" as="tag">
+					<li>
+						<div class="tag teal">
+							{tag.name}
+						</div>
+					</li>
+				</f:for>
+			</ul>
+		</div>
+	</div>
+	
+</div>
